@@ -18,8 +18,8 @@ enum class Element(val example: String, val getter: () -> String) {
     ISLAND("Island: The End", {
         "Zone: ${SkyBlockTracker.currentZone}"
     }),
-    AREA("⏣ Auction House", {
-        "⏣ ${SkyBlockTracker.currentZone}"
+    AREA("📍 Auction House", {
+        "📍 ${SkyBlockTracker.currentZone}"
     }),
     ISLAND_AREA("The End - Auction House", {
         "Exploring ${SkyBlockTracker.currentZone}"

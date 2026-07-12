@@ -97,8 +97,8 @@ object SkyBlockRPC : ClientModInitializer, Logger by LoggerFactory.getLogger("Sk
         LOGO_HYPIXEL(id="logo_hypixel", "Hypixel"),
         LOGO_ASA(id="logo_asa", "Asa"),
         LOGO_AGLAEA(id="logo_aglaea", "Aglaea"),
+        LOGO_MAKIMA(id="logo_makima", "Makima"),
         LOGO_XIAO(id="logo_xiao", "Xiao"),
-
         ;
 
         override fun toString() = displayName

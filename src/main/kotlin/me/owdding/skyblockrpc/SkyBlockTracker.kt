@@ -2,7 +2,6 @@ package me.owdding.skyblockrpc
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.minecraft.client.Minecraft
-import net.minecraft.network.chat.Component
 import net.minecraft.world.scores.DisplaySlot
 
 @Suppress("SpellCheckingInspection")
@@ -54,9 +53,11 @@ object SkyBlockTracker {
             val rawLine = "$prefix$scoreName$suffix"
             val cleanLine = rawLine.replace(Regex("§."), "").trim()
 
-            if (cleanLine.contains("⏣") || cleanLine.startsWith("Zone:")) {
+            // Added support for the new 7th Anniversary map pin icon
+            if (cleanLine.contains("⏣") || cleanLine.contains("📍") || cleanLine.startsWith("Zone:")) {
                 currentZone = cleanLine
                     .replace("⏣", "")
+                    .replace("📍", "")
                     .replace("Zone:", "")
                     .trim()
             }
